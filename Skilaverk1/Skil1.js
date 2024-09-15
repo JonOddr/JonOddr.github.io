@@ -1,14 +1,6 @@
-/////////////////////////////////////////////////////////////////
-//    Sýnidæmi í Tölvugrafík
-//     Sýnir notkun á "mousedown" og "mousemove" atburðum
-//
-//    Hjálmtýr Hafsteinsson, september 2024
-/////////////////////////////////////////////////////////////////
 var canvas;
 var gl;
 
-var vertices;
-var points = 0;
 const birdHolder = vec2(1.5, 1.5);
 const birdWidth = 0.05
 const birdHeight = 0.05
@@ -17,6 +9,8 @@ const numShots = 5;
 const maxPoints = 5;
 const maxBirds = 5;
 
+var vertices;
+var points = 0;
 var gunCenter = 0.0;
 var activeShots = [];
 var activeBirds = [];
@@ -269,14 +263,5 @@ function render() {
     } else {
         var winnerDiv = document.getElementById("win-msg");
         winnerDiv.innerHTML = "You win!!!";
-        // const resetButton = document.createElement("button");
-        // const btnMsg = document.createTextNode("Play again?");
-        // resetButton.appendChild(btnMsg);
-        // resetButton.setAttribute("id", "winbutton");
-        // document.body.insertBefore(resetButton, winnerDiv);
-        // document.getElementById("winbutton").onclick = function() {
-        //     points = 0;
-        //     window.requestAnimFrame(render);
-        // }
     }
 }
